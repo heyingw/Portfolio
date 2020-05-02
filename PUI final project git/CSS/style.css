@@ -1,0 +1,267 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+
+/*homepage background*/
+
+body.homepage {
+    background-color: black;
+    background-image: url(https://media.giphy.com/media/qxmX56CC3lQg8/giphy.gif), url(https://media.giphy.com/media/5vT8umpKMnwlRxUBrw/giphy.gif);
+    background-position: top -70% left 5%, top -20% right 50%;
+    background-repeat: no-repeat;
+}
+
+
+/*home page button*/
+
+#middleButton {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.colorButton {
+    width: 230px;
+    height: 65px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 61px;
+    color: #fff;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    border: 4px solid white;
+    background-size: 400%;
+}
+
+.colorButton:hover {
+    animation-name: buttonAnimate;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes buttonAnimate {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 400%;
+    }
+}
+
+.colorButton:before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    z-index: -1;
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    background-size: 400%;
+    border-radius: 40px;
+    transition: 0.5s;
+    filter: blur(20px);
+}
+
+.colorButton:hover:before {
+    filter: blur(20px);
+    animation-name: buttonAnimate;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+
+/* CCCCategory Page: 1. background and nav*/
+
+body.categoryPage {
+    background-color: black;
+}
+
+.navBox {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-evenly;
+    width: 80%;
+    margin: auto;
+    padding-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.navBox div {
+    padding: 20px;
+    margin-top: 30px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: white;
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navBox div:hover {
+    transform: translateY(10px);
+}
+
+
+/* CCCCategory Page: 2. category page buttons*/
+
+.buttonBox {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+
+.choose {
+    position: relative;
+    font-size: 30px;
+    width: 300px;
+    height: 300px;
+    line-height: 200px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    border: 3px solid white;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+#paintingButton {
+    background: linear-gradient(90deg, #03a9f4, #ffeb3b, #03a9f4);
+    background-size: 400%;
+}
+
+#viewAllButton {
+    background: linear-gradient(90deg, #f441a5, #ffeb3b, #f441a5);
+    background-size: 400%;
+}
+
+#photoButton {
+    background: linear-gradient(90deg, rgb(153, 1, 167), #03a9f4, rgb(153, 1, 167));
+    background-size: 400%;
+}
+
+#sketchButton {
+    background: linear-gradient(90deg, rgb(4, 165, 125), #ffeb3b, rgb(4, 165, 125));
+    background-size: 400%;
+}
+
+.choose:hover {
+    transform: translateY(-20px);
+    animation: category 8s linear infinite
+}
+
+.choose:before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    background-size: 400%;
+    filter: blur(20px)
+}
+
+@keyframes category {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 400%;
+    }
+}
+
+
+/*gallery pages*/
+body.designPage,
+body.photoPage,
+body.paintingPage,
+body.viewAllPage,
+body.sketchPage,
+body.aboutMepage,
+body.contactPage {
+    background-color: black;
+}
+
+div.galleryName {
+    font-family: sans-serif;
+    width: 30%;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    padding: 15px 20px;
+    margin: 15px auto;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+
+/*Mansonry layout*/
+
+main{
+
+}
+
+.grid {
+    margin: auto;
+}
+
+.grid-sizer,
+.grid-item {
+    margin:20px;
+}
+
+.grid-item img{
+    width: 300px;
+}
+
+
+
+
+/*contact page*/
+
+.contact, .about {
+    width: 60%;
+    margin: auto;
+    margin-top: 50px;
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    background-size: 400%;
+    border: 3px solid white;
+    color: white;
+    font-family: sans-serif;
+    line-height: 50px;
+    font-size: 25px;
+}
+
+.info {
+    width: 90%;
+    margin: 20px auto;
+}
+
+/*contact page*/
+
+.aboutInfo{
+    color: black;
+    font-style: italic;
+}
